@@ -38,7 +38,7 @@ const CTA = () => {
               <ArrowRight size={18} className="ml-3" />
             </button>
 
-            <a href={GLOBALS.CALENDAR_LINK} target="_blank" rel="noopener noreferrer"
+            <a href={GLOBALS.CALENDAR} target="_blank" rel="noopener noreferrer"
               className="w-full sm:w-auto inline-flex items-center justify-center px-10 py-4 border border-white border-opacity-30 text-white rounded-xl font-black text-sm uppercase tracking-widest hover:bg-white hover:text-gray-900 transition"
             >
               Book a Demo

@@ -108,7 +108,7 @@ const Home = () => {
 
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <Button onClick={() => navigate('contact')} variant="primary" className="px-10 shadow-indigo-100">Get Started</Button>
-                <Button href={GLOBALS.CALENDAR} variant="outline" className="px-10">Book a Demo</Button>
+                <Button href={GLOBALS.CALENDAR} target="_blank" rel="noopener noreferrer" variant="outline" className="px-10">Book a Demo</Button>
               </div>
             </div>
           </div>
@@ -150,7 +150,7 @@ const Home = () => {
 
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <Button onClick={() => navigate('contact')} variant="dark" className="px-10">Get Started</Button>
-                <Button href={GLOBALS.CALENDAR} variant="outline" className="px-10">Book a Demo</Button>
+                <Button href={GLOBALS.CALENDAR} target="_blank" rel="noopener noreferrer" variant="outline" className="px-10">Book a Demo</Button>
               </div>
             </div>
             <div className="relative">
@@ -218,7 +218,7 @@ const Home = () => {
 
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <Button onClick={() => navigate('contact')} variant="primary" className="px-10 shadow-pink-100">Get Started</Button>
-                <Button href={GLOBALS.CALENDAR} variant="outline" className="px-10">Book a Demo</Button>
+                <Button href={GLOBALS.CALENDAR} target="_blank" rel="noopener noreferrer" variant="outline" className="px-10">Book a Demo</Button>
               </div>
             </div>
           </div>
@@ -259,7 +259,7 @@ const Home = () => {
             <Button onClick={() => navigate('contact')} variant="primary" className="px-12 py-4 text-lg">
               Get Started
             </Button>
-            <Button href={GLOBALS.CALENDAR} variant="outline" className="px-12 py-4 text-lg">
+            <Button href={GLOBALS.CALENDAR} target="_blank" rel="noopener noreferrer" variant="outline" className="px-12 py-4 text-lg">
               Book a Demo
             </Button>
           </div>
@@ -340,7 +340,7 @@ const Home = () => {
                 <p className="text-lg text-gray-500 leading-relaxed">
                   Seamlessly integrate with your team's calendars to schedule, modify, and confirm appointments in real-time. Smart conflict detection ensures no double-bookings, ever.
                 </p>
-                <Button href={GLOBALS.CALENDAR} variant="dark" className="group">
+                <Button href={GLOBALS.CALENDAR} target="_blank" rel="noopener noreferrer" variant="dark" className="group">
                   Book Smarter
                   <ChevronRight className="h-4 w-4 group-hover:trangray-x-1 transition-transform" />
                 </Button>
