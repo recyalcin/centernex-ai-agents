@@ -31,6 +31,7 @@ const Navbar = ({ scrolled }) => {
           {/* Desktop Menü (lg ve üzeri) */}
           <div className="hidden lg:flex items-center space-x-2">
             <Button onClick={() => handleNavigate('contact')} variant="ghost">Contact Us</Button>
+            <Button onClick={() => handleNavigate('pricing')} variant="ghost">Pricing</Button>
             <Button onClick={() => handleNavigate('roi')} variant="ghost">ROI Calculator</Button>
             <Button onClick={() => handleNavigate('demo')} variant="ghost">Live Demo</Button>
             <div className="w-px h-6 bg-gray-200 mx-2"></div>
