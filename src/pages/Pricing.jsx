@@ -51,7 +51,7 @@ const Pricing = () => {
               </div>
 
               <div className="space-y-4 mb-10 flex-grow">
-                {["Virtual Receptionist", "AI Website Chat", "Calendar Automation", "Email & SMS Marketing", "CRM Access", "Mobile App Access"].map((f, i) => (
+                {["Virtual Receptionist", "AI Website Chat", "Calendar Automation", "Email & SMS Marketing", "Reputation Management", "CRM Access", "Mobile App Access"].map((f, i) => (
                   <div key={i} className="flex items-center space-x-3 text-gray-600">
                     <Check className="h-5 w-5 text-green-500" />
                     <span className="text-sm">{f}</span>
