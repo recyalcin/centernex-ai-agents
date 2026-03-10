@@ -266,6 +266,129 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Section: SMART WEBSITES */} 
+      <section className="py-32 bg-white relative overflow-hidden border-b border-gray-50">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="space-y-8">
+              <div>
+                <Badge className="bg-yellow-100 text-yellow-700 mb-6">Smart Websites</Badge>
+                <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-6 uppercase tracking-tight">
+                  Need a website that actually brings in customers?
+                </h2>
+                <p className="text-lg text-gray-500 leading-relaxed">
+                  Most websites only look good. Smart Websites do more — they help you capture leads, answer questions, guide visitors, and turn traffic into real business. With Centernex, your website becomes more than an online presence. It becomes a 24/7 growth engine.
+                </p>
+              </div>
+
+              <div className="space-y-4">
+                {[
+                  "Modern, high-converting website design",
+                  "Built to capture and qualify leads",
+                  "AI-powered chat and voice interactions",
+                  "Instant appointment and inquiry handling",
+                  "Connected directly to your CRM and workflows"
+                ].map((item, idx) => (
+                  <div key={idx} className="flex items-center gap-4 text-gray-700 group">
+                    <div className="p-1.5 bg-yellow-50 rounded-full group-hover:bg-yellow-100 transition-colors shadow-sm">
+                      <ChevronRightCircle className="h-5 w-5 text-yellow-600" />
+                    </div>
+                    <span className="font-semibold text-gray-800">{item}</span>
+                  </div>
+                ))}
+              </div>
+
+              <div className="bg-gray-50 border border-gray-100 rounded-[2rem] p-6">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  Add a Voice Agent. Turn your website into a live sales assistant.
+                </h3>
+                <p className="text-gray-500 leading-relaxed">
+                  Give visitors a faster, more human way to engage. Your AI Voice Agent can answer questions, qualify prospects, schedule appointments, and help customers take the next step — automatically, day or night.
+                </p>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                <Button onClick={() => navigate('contact')} variant="primary" className="px-10 shadow-yellow-100">
+                  Build My Smart Website
+                </Button>
+                <Button href={GLOBALS.CALENDAR} target="_blank" rel="noopener noreferrer" variant="outline" className="px-10">
+                  Book a Demo
+                </Button>
+              </div>
+            </div>
+
+<div className="relative">
+  <div className="absolute -inset-10 bg-yellow-100 rounded-full blur-[100px] opacity-20"></div>
+
+  <div className="relative bg-[#0F172A] rounded-[2.5rem] p-8 shadow-2xl overflow-hidden border border-white/10">
+    <div className="absolute inset-0 bg-gradient-to-br from-[#0F172A] via-[#111827] to-[#1E293B]"></div>
+
+    <div className="relative z-10">
+      <div className="flex items-center justify-between mb-8">
+        <div>
+          <div className="font-bold text-xl">Smart Website + Voice Agent</div>
+          <div className="text-yellow-300 text-sm mt-1">
+            Your website that speaks, converts, and books
+          </div>
+        </div>
+        <div className="h-14 w-14 rounded-2xl bg-gradient-to-tr from-yellow-500 to-orange-400 flex items-center justify-center shadow-lg">
+          <Globe className="h-7 w-7 text-white" />
+        </div>
+      </div>
+
+      <div className="space-y-4 mb-8">
+        <div className="bg-white/10 border border-white/15 rounded-2xl p-4">
+          <div className="text-sm text-gray-300 mb-2">Visitor says</div>
+          <div className="font-medium leading-relaxed">
+            “Hi, I’m looking for a website for my business and I also need help
+            handling incoming leads.”
+          </div>
+        </div>
+
+        <div className="bg-yellow-500/12 border border-yellow-400/30 rounded-2xl p-4">
+          <div className="text-sm text-yellow-300 mb-2">Centernex AI responds</div>
+          <div className="font-medium leading-relaxed">
+            “We can build you a Smart Website that not only looks professional,
+            but also answers customer questions, captures leads, and books
+            appointments with a built-in AI Voice Agent.”
+          </div>
+        </div>
+      </div>
+
+      <div className="grid grid-cols-2 gap-4">
+        <div className="bg-white/10 rounded-2xl p-4 border border-white/15">
+          <div className="text-yellow-300 text-xs uppercase font-bold mb-2">Website</div>
+          <div className="font-semibold">Built to Convert</div>
+          <div className="text-sm mt-1">
+            Modern, mobile-ready, lead-focused pages
+          </div>
+        </div>
+
+        <div className="bg-white/10 rounded-2xl p-4 border border-white/15">
+          <div className="text-yellow-300 text-xs uppercase font-bold mb-2">Voice AI</div>
+          <div className="font-semibold">Built to Respond</div>
+          <div className="text-sm mt-1">
+            Answers, qualifies, and books 24/7
+          </div>
+        </div>
+      </div>
+
+      <div className="absolute -right-6 bottom-8 bg-yellow-500 text-white px-4 py-3 rounded-2xl shadow-xl flex items-center gap-3">
+        <CheckCircle2 className="h-5 w-5" />
+        <div className="text-left">
+          <div className="text-sm font-bold">More Than a Website</div>
+          <div className="text-[10px] text-yellow-100 uppercase font-black">
+            It Works For You
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          </div>
+        </div>
+      </section>
+
       {/* Features Showcase - Voice AI details */}
       <section className="py-32 bg-white">
         <div className="max-w-7xl mx-auto px-6">
