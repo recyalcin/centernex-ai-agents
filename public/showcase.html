@@ -1,254 +1,934 @@
 <!DOCTYPE html>
 <html lang="en" class="plt-desktop md" mode="md">
-
 <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <meta http-equiv="origin-trial"
-                content="A7vZI3v+Gz7JfuRolKNM4Aff6zaGuT7X0mf3wtoZTnKv6497cVMnhy03KDqX7kBz/q/iidW7srW31oQbBt4VhgoAAACUeyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGUuY29tOjQ0MyIsImZlYXR1cmUiOiJEaXNhYmxlVGhpcmRQYXJ0eVN0b3JhZ2VQYXJ0aXRpb25pbmczIiwiZXhwaXJ5IjoxNzU3OTgwODAwLCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ==">
-        <style data-styles="">
-                slot-fb {
-                        display: contents
-                }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Industry Showcase Platform</title>
+  <meta name="description" content="Explore landing pages across different industries" />
 
-                slot-fb[hidden] {
-                        display: none
-                }
+  <link rel="icon" href="assets/icon.png" media="(prefers-color-scheme: light)">
+  <link rel="icon" href="assets/icon.png" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="assets/icon.png" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/icon.png">
 
-                acknowledge-message,
-                attachment-grid,
-                chat-conversation,
-                chat-feedback,
-                chat-form,
-                chat-input,
-                chat-message,
-                chat-message-status,
-                chat-pane,
-                chat-selection,
-                chat-widget,
-                ion-accordion,
-                ion-accordion-group,
-                ion-action-sheet,
-                ion-alert,
-                ion-app,
-                ion-avatar,
-                ion-back-button,
-                ion-backdrop,
-                ion-badge,
-                ion-breadcrumb,
-                ion-breadcrumbs,
-                ion-button,
-                ion-buttons,
-                ion-card,
-                ion-card-content,
-                ion-card-header,
-                ion-card-subtitle,
-                ion-card-title,
-                ion-checkbox,
-                ion-chip,
-                ion-col,
-                ion-content,
-                ion-datetime,
-                ion-datetime-button,
-                ion-fab,
-                ion-fab-button,
-                ion-fab-list,
-                ion-footer,
-                ion-grid,
-                ion-header,
-                ion-icon,
-                ion-img,
-                ion-infinite-scroll,
-                ion-infinite-scroll-content,
-                ion-input,
-                ion-item,
-                ion-item-divider,
-                ion-item-group,
-                ion-item-option,
-                ion-item-options,
-                ion-item-sliding,
-                ion-label,
-                ion-list,
-                ion-list-header,
-                ion-loading,
-                ion-menu,
-                ion-menu-button,
-                ion-menu-toggle,
-                ion-modal,
-                ion-nav,
-                ion-nav-link,
-                ion-note,
-                ion-picker,
-                ion-picker-column,
-                ion-picker-column-internal,
-                ion-picker-internal,
-                ion-popover,
-                ion-progress-bar,
-                ion-radio,
-                ion-radio-group,
-                ion-range,
-                ion-refresher,
-                ion-refresher-content,
-                ion-reorder,
-                ion-reorder-group,
-                ion-ripple-effect,
-                ion-route,
-                ion-route-redirect,
-                ion-router,
-                ion-router-link,
-                ion-router-outlet,
-                ion-row,
-                ion-searchbar,
-                ion-segment,
-                ion-segment-button,
-                ion-select,
-                ion-select-option,
-                ion-select-popover,
-                ion-skeleton-text,
-                ion-spinner,
-                ion-split-pane,
-                ion-tab,
-                ion-tab-bar,
-                ion-tab-button,
-                ion-tabs,
-                ion-text,
-                ion-textarea,
-                ion-thumbnail,
-                ion-title,
-                ion-toast,
-                ion-toggle,
-                ion-toolbar,
-                notification-banner,
-                reconnecting-banner,
-                restart-chat,
-                voice-call-error-banner {
-                        visibility: hidden
-                }
+  <style>
+    :root {
+      --bg: #0b1020;
+      --panel: rgba(255,255,255,0.08);
+      --panel-2: rgba(255,255,255,0.12);
+      --text: #f8fafc;
+      --muted: #cbd5e1;
+      --muted-2: #94a3b8;
+      --border: rgba(255,255,255,0.12);
+      --shadow: 0 20px 60px rgba(0,0,0,0.28);
+      --radius: 24px;
+    }
 
-                .hydrated {
-                        visibility: inherit
-                }
-        </style>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="preload" as="image" href="./showcase_files/barbershop.png">
-        <link rel="preload" as="image" href="./showcase_files/vinylpromachines.png">
-        <link rel="preload" as="image" href="./showcase_files/veloriasweets.png">
-        <link rel="preload" as="image" href="./showcase_files/horizoncanopysolutions.png">
-        <link rel="preload" as="image" href="./showcase_files/craftprodepot.png">
-        <link rel="stylesheet" href="./showcase_files/b766bf86c2dd5e8d.css" data-precedence="next">
+    * {
+      box-sizing: border-box;
+    }
 
-        <meta name="next-size-adjust" content="">
-        <title>Industry Showcase Platform</title>
-        <meta name="description" content="Explore landing pages across different industries">
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #0f172a;
+      color: white;
+    }
 
-        <link rel="icon" href="assets/icon.png" media="(prefers-color-scheme: light)">
-        <link rel="icon" href="assets/icon.png" media="(prefers-color-scheme: dark)">
-        <link rel="icon" href="assets/icon.png" type="image/svg+xml">
-        <link rel="apple-touch-icon" href="assets/icon.png">
+    body {
+      overflow: hidden;
+    }
 
+    .app-shell {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      background: rgba(15, 23, 42, 0.86);
+      backdrop-filter: blur(14px);
+    }
+
+    .topbar-inner {
+      width: 100%;
+      padding: 10px 12px;
+      overflow-x: auto;
+    }
+
+    .topbar-scroll {
+      display: flex;
+      justify-content: center;
+    }
+
+    .demo-tabs {
+      display: inline-flex;
+      min-width: max-content;
+      gap: 6px;
+      padding: 6px;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .demo {
+      border: none;
+      cursor: pointer;
+      border-radius: 10px;
+      padding: 10px 14px;
+      font-size: 13px;
+      font-weight: 600;
+      background: transparent;
+      color: #94a3b8;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .demo:hover {
+      color: #fff;
+      transform: translateY(-1px);
+    }
+
+    .demo.active {
+      background: rgba(255,255,255,0.12);
+      color: #fff;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+    }
+
+    .main {
+      flex: 1;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .showcase {
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: stretch;
+      justify-content: center;
+      background: #0f172a;
+    }
+
+    .demo-stage {
+      position: absolute;
+      inset: 0;
+      overflow: auto;
+    }
+
+    .demo-page {
+      min-height: 100%;
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .demo-page-inner {
+      width: min(1200px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 28px 0 48px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .demo-navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 28px;
+      padding: 14px 18px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.1);
+      backdrop-filter: blur(10px);
+    }
+
+    .brand {
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      color: rgba(255,255,255,0.82);
+      font-size: 14px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      background: rgba(255,255,255,0.1);
+      color: rgba(255,255,255,0.88);
+      margin-bottom: 18px;
+    }
+
+    .hero-title {
+      font-size: clamp(34px, 6vw, 68px);
+      line-height: 0.98;
+      letter-spacing: -0.05em;
+      font-weight: 900;
+      margin: 0 0 18px;
+    }
+
+    .hero-subtitle {
+      font-size: clamp(15px, 2vw, 18px);
+      line-height: 1.7;
+      color: rgba(255,255,255,0.82);
+      max-width: 640px;
+      margin: 0 0 26px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+      border: none;
+      padding: 14px 18px;
+      border-radius: 14px;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .btn-primary {
+      background: white;
+      color: #0f172a;
+    }
+
+    .btn-secondary {
+      background: rgba(255,255,255,0.08);
+      color: white;
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .stats-row {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .stat-card {
+      padding: 16px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.1);
+      backdrop-filter: blur(8px);
+      box-shadow: var(--shadow);
+    }
+
+    .stat-value {
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      margin-bottom: 4px;
+    }
+
+    .stat-label {
+      font-size: 13px;
+      color: rgba(255,255,255,0.72);
+    }
+
+    .hero-visual {
+      min-height: 420px;
+      border-radius: 30px;
+      overflow: hidden;
+      position: relative;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.1);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
+    }
+
+    .mock-window {
+      position: absolute;
+      inset: 0;
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .mock-toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .mock-dots {
+      display: flex;
+      gap: 7px;
+    }
+
+    .mock-dots span {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.5);
+    }
+
+    .mock-chip {
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      background: rgba(255,255,255,0.12);
+      color: rgba(255,255,255,0.86);
+    }
+
+    .mock-content {
+      flex: 1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .panel {
+      border-radius: 20px;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.12);
+      padding: 16px;
+    }
+
+    .panel-title {
+      font-size: 13px;
+      font-weight: 800;
+      color: rgba(255,255,255,0.88);
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .panel-list {
+      display: grid;
+      gap: 10px;
+    }
+
+    .panel-line,
+    .panel-block {
+      border-radius: 12px;
+      background: rgba(255,255,255,0.1);
+    }
+
+    .panel-line {
+      height: 12px;
+    }
+
+    .panel-block {
+      height: 74px;
+    }
+
+    .feature-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .feature-pills span {
+      padding: 10px 12px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 700;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      color: rgba(255,255,255,0.86);
+    }
+
+    #scripter {
+      position: absolute;
+      right: 22px;
+      bottom: 22px;
+      z-index: 20;
+    }
+
+    @media (max-width: 960px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-visual {
+        min-height: 360px;
+      }
+
+      .mock-content {
+        grid-template-columns: 1fr;
+      }
+
+      #scripter {
+        right: 14px;
+        bottom: 14px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .demo-page-inner {
+        width: min(100%, calc(100% - 20px));
+        padding-top: 16px;
+      }
+
+      .demo-navbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-links {
+        justify-content: flex-start;
+        gap: 12px;
+      }
+
+      .stats-row {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-visual {
+        min-height: 320px;
+        border-radius: 22px;
+      }
+
+      .hero-title {
+        line-height: 1.02;
+      }
+    }
+  </style>
 </head>
 
-<body class="geist_f15bd114-module__7725RG__variable geist_mono_6ed36146-module__KdPPOG__variable font-sans antialiased">
-        <div class="h-screen overflow-hidden flex flex-col">
-                <div
-                        class="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-                        <div class="w-full px-2 sm:container sm:mx-auto sm:px-4">
-                                <div
-                                        class="hide-scrollbar flex items-center justify-start overflow-x-auto py-2 sm:justify-center sm:py-4">
-                                        <div class="inline-flex min-w-max items-center gap-1 rounded-lg bg-muted p-1">
-                                                <button class="demo relative whitespace-nowrap rounded-md px-2.5 py-1.5 text-xs font-medium transition-all sm:px-4 sm:py-2.5 sm:text-sm hover:text-foreground active:scale-95 text-muted-foreground">VeloriaSweets</button>
-                                                <button class="demo relative whitespace-nowrap rounded-md px-2.5 py-1.5 text-xs font-medium transition-all sm:px-4 sm:py-2.5 sm:text-sm hover:text-foreground active:scale-95 text-muted-foreground">HorizonCanopySolutions</button>
-                                                <button class="demo relative whitespace-nowrap rounded-md px-2.5 py-1.5 text-xs font-medium transition-all sm:px-4 sm:py-2.5 sm:text-sm hover:text-foreground active:scale-95 text-muted-foreground">VinylProMachines</button>
-                                                <button class="demo relative whitespace-nowrap rounded-md px-2.5 py-1.5 text-xs font-medium transition-all sm:px-4 sm:py-2.5 sm:text-sm hover:text-foreground active:scale-95 text-muted-foreground">Barber Shop</button>
-                                                <button class="demo relative whitespace-nowrap rounded-md px-2.5 py-1.5 text-xs font-medium transition-all sm:px-4 sm:py-2.5 sm:text-sm hover:text-foreground active:scale-95  bg-background text-foreground shadow-sm">CraftProDepot</button>
-                                        </div>
-                                </div>
-                        </div>
-                </div>
-                <main class="flex-1 overflow-hidden">
-                        <div class="h-full">
-                                <section class="relative h-full flex items-center justify-center overflow-hidden">
-                                        <div class="absolute inset-0 z-0">
-                                                <img id="demo_image" alt="Demo Background" decoding="async"
-                                                        data-nimg="fill" class="object-cover"
-                                                        src="./showcase_files/craftprodepot.png"
-                                                        style="position: absolute; height: 100%; width: 100%; inset: 0px;">
-                                                <div class="absolute inset-0"></div>
-                                        </div>
-                                        <div id="scripter">
-                                                <script src="https://widgets.leadconnectorhq.com/loader.js"
-                                                        data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
-                                                        data-widget-id="699613f395fbc57fe3c000b7">
-                                                </script>
-                                        </div>
-
-                                </section>
-                        </div>
-                </main>
+<body>
+  <div class="app-shell">
+    <div class="topbar">
+      <div class="topbar-inner">
+        <div class="topbar-scroll">
+          <div class="demo-tabs">
+            <button class="demo" data-key="veloriasweets">VeloriaSweets</button>
+            <button class="demo" data-key="horizoncanopysolutions">HorizonCanopySolutions</button>
+            <button class="demo" data-key="vinylpromachines">VinylProMachines</button>
+            <button class="demo" data-key="barbershop">Barber Shop</button>
+            <button class="demo active" data-key="craftprodepot">CraftProDepot</button>
+          </div>
         </div>
+      </div>
+    </div>
 
-</body>
+    <main class="main">
+      <section class="showcase">
+        <div id="demo_stage" class="demo-stage"></div>
 
-<script>
-        function loadWidget(widgetId) {
-                const container = document.getElementById('scripter');
+        <div id="scripter">
+          <script
+            src="https://widgets.leadconnectorhq.com/loader.js"
+            data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
+            data-widget-id="699613f395fbc57fe3c000b7">
+          </script>
+        </div>
+      </section>
+    </main>
+  </div>
 
-                // Eski scripti kaldır
-                container.innerHTML = '';
+  <script>
+    function loadWidget(widgetId) {
+      const container = document.getElementById('scripter');
+      container.innerHTML = '';
 
-                // Sayfaya eklenmiş iframe'leri de temizle
-                document
-                        .querySelectorAll('iframe[src*="leadconnectorhq"]')
-                        .forEach(el => el.remove());
+      document
+        .querySelectorAll('iframe[src*="leadconnectorhq"]')
+        .forEach(el => el.remove());
 
-                // Yeni script oluştur
-                const script = document.createElement('script');
-                script.src = 'https://widgets.leadconnectorhq.com/loader.js';
-                script.async = true;
-                script.defer = true;
+      const script = document.createElement('script');
+      script.src = 'https://widgets.leadconnectorhq.com/loader.js';
+      script.async = true;
+      script.defer = true;
+      script.dataset.resourcesUrl = 'https://widgets.leadconnectorhq.com/chat-widget/loader.js';
+      script.dataset.widgetId = widgetId;
 
-                script.dataset.resourcesUrl =
-                        'https://widgets.leadconnectorhq.com/chat-widget/loader.js';
-                script.dataset.widgetId = widgetId;
+      container.appendChild(script);
+    }
 
-                container.appendChild(script);
+    const widgetMap = {
+      veloriasweets: '699615f2f303677dc8680667',
+      horizoncanopysolutions: '6996158a95fbc53f3ac06c22',
+      vinylpromachines: '6996151595fbc54a6ec04f34',
+      barbershop: '69384336e132d83cd7d7b3a8',
+      craftprodepot: '699613f395fbc57fe3c000b7',
+    };
+
+    const demoTemplates = {
+      veloriasweets: `
+        <div class="demo-page" style="background:
+          radial-gradient(circle at top left, rgba(255, 173, 214, 0.42), transparent 32%),
+          radial-gradient(circle at right center, rgba(255, 224, 102, 0.20), transparent 30%),
+          linear-gradient(135deg, #6d214f 0%, #b33972 45%, #f8a5c2 100%);">
+          <div class="demo-page-inner">
+            <div class="demo-navbar">
+              <div class="brand">VeloriaSweets</div>
+              <div class="nav-links">
+                <span>Collections</span>
+                <span>Custom Orders</span>
+                <span>Wedding Desserts</span>
+                <span>Contact</span>
+              </div>
+            </div>
+
+            <div class="hero-grid">
+              <div>
+                <div class="eyebrow">Luxury Dessert Studio</div>
+                <h1 class="hero-title">Handcrafted sweets for unforgettable celebrations.</h1>
+                <p class="hero-subtitle">
+                  Boutique cakes, macarons, dessert tables, and custom confectionery designed to bring elegance and joy to every event.
+                </p>
+
+                <div class="hero-actions">
+                  <button class="btn-primary">Order Consultation</button>
+                  <button class="btn-secondary">See Signature Menu</button>
+                </div>
+
+                <div class="stats-row">
+                  <div class="stat-card">
+                    <div class="stat-value">4.9★</div>
+                    <div class="stat-label">Client satisfaction</div>
+                  </div>
+                  <div class="stat-card">
+                    <div class="stat-value">1200+</div>
+                    <div class="stat-label">Custom orders completed</div>
+                  </div>
+                  <div class="stat-card">
+                    <div class="stat-value">48h</div>
+                    <div class="stat-label">Fast response time</div>
+                  </div>
+                </div>
+
+                <div class="feature-pills">
+                  <span>Wedding Cakes</span>
+                  <span>Corporate Events</span>
+                  <span>Macaron Towers</span>
+                  <span>Custom Dessert Tables</span>
+                </div>
+              </div>
+
+              <div class="hero-visual">
+                <div class="mock-window">
+                  <div class="mock-toolbar">
+                    <div class="mock-dots"><span></span><span></span><span></span></div>
+                    <div class="mock-chip">Live Order Preview</div>
+                  </div>
+                  <div class="mock-content">
+                    <div class="panel">
+                      <div class="panel-title">Popular Collections</div>
+                      <div class="panel-list">
+                        <div class="panel-block"></div>
+                        <div class="panel-line" style="width: 82%"></div>
+                        <div class="panel-line" style="width: 60%"></div>
+                      </div>
+                    </div>
+                    <div class="panel">
+                      <div class="panel-title">Today’s Featured Box</div>
+                      <div class="panel-list">
+                        <div class="panel-block" style="height: 120px;"></div>
+                        <div class="panel-line" style="width: 74%"></div>
+                        <div class="panel-line" style="width: 56%"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      `,
+
+      horizoncanopysolutions: `
+        <div class="demo-page" style="background:
+          radial-gradient(circle at top right, rgba(81, 207, 102, 0.24), transparent 30%),
+          radial-gradient(circle at left center, rgba(116, 192, 252, 0.18), transparent 34%),
+          linear-gradient(135deg, #0b3d2e 0%, #14532d 42%, #134e4a 100%);">
+          <div class="demo-page-inner">
+            <div class="demo-navbar">
+              <div class="brand">HorizonCanopySolutions</div>
+              <div class="nav-links">
+                <span>Commercial</span>
+                <span>Residential</span>
+                <span>Projects</span>
+                <span>Get Quote</span>
+              </div>
+            </div>
+
+            <div class="hero-grid">
+              <div>
+                <div class="eyebrow">Outdoor Shade Experts</div>
+                <h1 class="hero-title">Premium canopies built for comfort, design, and durability.</h1>
+                <p class="hero-subtitle">
+                  We create shade systems for patios, hospitality spaces, schools, and commercial properties with modern engineering and elegant finishes.
+                </p>
+
+                <div class="hero-actions">
+                  <button class="btn-primary">Request a Quote</button>
+                  <button class="btn-secondary">Browse Installations</button>
+                </div>
+
+                <div class="stats-row">
+                  <div class="stat-card">
+                    <div class="stat-value">250+</div>
+                    <div class="stat-label">Projects delivered</div>
+                  </div>
+                  <div class="stat-card">
+                    <div class="stat-value">15 yrs</div>
+                    <div class="stat-label">Industry experience</div>
+                  </div>
+                  <div class="stat-card">
+                    <div class="stat-value">98%</div>
+                    <div class="stat-label">Repeat client rate</div>
+                  </div>
+                </div>
+
+                <div class="feature-pills">
+                  <span>Retractable Systems</span>
+                  <span>Architectural Canopies</span>
+                  <span>Weather Resistant</span>
+                  <span>Custom Fabrication</span>
+                </div>
+              </div>
+
+              <div class="hero-visual">
+                <div class="mock-window">
+                  <div class="mock-toolbar">
+                    <div class="mock-dots"><span></span><span></span><span></span></div>
+                    <div class="mock-chip">Project Dashboard</div>
+                  </div>
+                  <div class="mock-content">
+                    <div class="panel">
+                      <div class="panel-title">Recent Installations</div>
+                      <div class="panel-list">
+                        <div class="panel-block"></div>
+                        <div class="panel-block"></div>
+                      </div>
+                    </div>
+                    <div class="panel">
+                      <div class="panel-title">Request Flow</div>
+                      <div class="panel-list">
+                        <div class="panel-line"></div>
+                        <div class="panel-line" style="width: 92%"></div>
+                        <div class="panel-line" style="width: 68%"></div>
+                        <div class="panel-block" style="height: 150px;"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      `,
+
+      vinylpromachines: `
+        <div class="demo-page" style="background:
+          radial-gradient(circle at top left, rgba(255, 159, 67, 0.24), transparent 26%),
+          radial-gradient(circle at bottom right, rgba(72, 219, 251, 0.18), transparent 30%),
+          linear-gradient(135deg, #111827 0%, #1f2937 45%, #0f172a 100%);">
+          <div class="demo-page-inner">
+            <div class="demo-navbar">
+              <div class="brand">VinylProMachines</div>
+              <div class="nav-links">
+                <span>Machines</span>
+                <span>Materials</span>
+                <span>Support</span>
+                <span>Financing</span>
+              </div>
+            </div>
+
+            <div class="hero-grid">
+              <div>
+                <div class="eyebrow">Industrial Print & Cut Systems</div>
+                <h1 class="hero-title">High-performance vinyl equipment for serious production teams.</h1>
+                <p class="hero-subtitle">
+                  Discover cutters, laminators, heat presses, and integrated workflows designed for sign shops, apparel businesses, and print professionals.
+                </p>
+
+                <div class="hero-actions">
+                  <button class="btn-primary">Explore Machines</button>
+                  <button class="btn-secondary">Talk to Sales</button>
+                </div>
+
+                <div class="stats-row">
+                  <div class="stat-card">
+                    <div class="stat-value">30%</div>
+                    <div class="stat-label">Faster output workflows</div>
+                  </div>
+                  <div class="stat-card">
+                    <div class="stat-value">24/7</div>
+                    <div class="stat-label">Technical assistance</div>
+                  </div>
+                  <div class="stat-card">
+                    <div class="stat-value">5000+</div>
+                    <div class="stat-label">Machines shipped</div>
+                  </div>
+                </div>
+
+                <div class="feature-pills">
+                  <span>Print & Cut</span>
+                  <span>Heat Press</span>
+                  <span>Business Financing</span>
+                  <span>Material Bundles</span>
+                </div>
+              </div>
+
+              <div class="hero-visual">
+                <div class="mock-window">
+                  <div class="mock-toolbar">
+                    <div class="mock-dots"><span></span><span></span><span></span></div>
+                    <div class="mock-chip">Machine Comparison</div>
+                  </div>
+                  <div class="mock-content">
+                    <div class="panel">
+                      <div class="panel-title">Top Models</div>
+                      <div class="panel-list">
+                        <div class="panel-line" style="width: 80%"></div>
+                        <div class="panel-block"></div>
+                        <div class="panel-block"></div>
+                      </div>
+                    </div>
+                    <div class="panel">
+                      <div class="panel-title">Specs Overview</div>
+                      <div class="panel-list">
+                        <div class="panel-line"></div>
+                        <div class="panel-line"></div>
+                        <div class="panel-line" style="width: 76%"></div>
+                        <div class="panel-line" style="width: 61%"></div>
+                        <div class="panel-block" style="height: 110px;"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      `,
+
+      barbershop: `
+        <div class="demo-page" style="background:
+          radial-gradient(circle at top center, rgba(239, 68, 68, 0.20), transparent 24%),
+          radial-gradient(circle at left bottom, rgba(251, 191, 36, 0.14), transparent 30%),
+          linear-gradient(135deg, #1c1917 0%, #292524 45%, #44403c 100%);">
+          <div class="demo-page-inner">
+            <div class="demo-navbar">
+              <div class="brand">Barber Shop</div>
+              <div class="nav-links">
+                <span>Services</span>
+                <span>Book Now</span>
+                <span>Our Team</span>
+                <span>Locations</span>
+              </div>
+            </div>
+
+            <div class="hero-grid">
+              <div>
+                <div class="eyebrow">Modern Grooming Studio</div>
+                <h1 class="hero-title">Sharp cuts, clean fades, and effortless online booking.</h1>
+                <p class="hero-subtitle">
+                  A premium barber experience with expert stylists, easy appointment scheduling, and tailored grooming services for every client.
+                </p>
+
+                <div class="hero-actions">
+                  <button class="btn-primary">Book Appointment</button>
+                  <button class="btn-secondary">View Services</button>
+                </div>
+
+                <div class="stats-row">
+                  <div class="stat-card">
+                    <div class="stat-value">12k+</div>
+                    <div class="stat-label">Appointments served</div>
+                  </div>
+                  <div class="stat-card">
+                    <div class="stat-value">4.8★</div>
+                    <div class="stat-label">Average rating</div>
+                  </div>
+                  <div class="stat-card">
+                    <div class="stat-value">7 days</div>
+                    <div class="stat-label">Open every week</div>
+                  </div>
+                </div>
+
+                <div class="feature-pills">
+                  <span>Skin Fade</span>
+                  <span>Beard Trim</span>
+                  <span>Walk-ins Welcome</span>
+                  <span>Online Scheduling</span>
+                </div>
+              </div>
+
+              <div class="hero-visual">
+                <div class="mock-window">
+                  <div class="mock-toolbar">
+                    <div class="mock-dots"><span></span><span></span><span></span></div>
+                    <div class="mock-chip">Booking Snapshot</div>
+                  </div>
+                  <div class="mock-content">
+                    <div class="panel">
+                      <div class="panel-title">Today’s Availability</div>
+                      <div class="panel-list">
+                        <div class="panel-line"></div>
+                        <div class="panel-line" style="width: 88%"></div>
+                        <div class="panel-line" style="width: 65%"></div>
+                        <div class="panel-block" style="height: 128px;"></div>
+                      </div>
+                    </div>
+                    <div class="panel">
+                      <div class="panel-title">Top Services</div>
+                      <div class="panel-list">
+                        <div class="panel-block"></div>
+                        <div class="panel-line" style="width: 72%"></div>
+                        <div class="panel-line" style="width: 58%"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      `,
+
+      craftprodepot: `
+        <div class="demo-page" style="background:
+          radial-gradient(circle at right top, rgba(34, 197, 94, 0.22), transparent 28%),
+          radial-gradient(circle at left center, rgba(59, 130, 246, 0.16), transparent 34%),
+          linear-gradient(135deg, #0f172a 0%, #1e293b 45%, #111827 100%);">
+          <div class="demo-page-inner">
+            <div class="demo-navbar">
+              <div class="brand">CraftProDepot</div>
+              <div class="nav-links">
+                <span>Catalog</span>
+                <span>Bulk Orders</span>
+                <span>Brands</span>
+                <span>Help Center</span>
+              </div>
+            </div>
+
+            <div class="hero-grid">
+              <div>
+                <div class="eyebrow">Professional Supply Marketplace</div>
+                <h1 class="hero-title">Tools, materials, and shop essentials for makers who scale.</h1>
+                <p class="hero-subtitle">
+                  Source reliable equipment and workshop supplies with bulk pricing, fast fulfillment, and expert support for growing craft businesses.
+                </p>
+
+                <div class="hero-actions">
+                  <button class="btn-primary">Browse Products</button>
+                  <button class="btn-secondary">Request Bulk Pricing</button>
+                </div>
+
+                <div class="stats-row">
+                  <div class="stat-card">
+                    <div class="stat-value">8k+</div>
+                    <div class="stat-label">SKUs available</div>
+                  </div>
+                  <div class="stat-card">
+                    <div class="stat-value">2-day</div>
+                    <div class="stat-label">Fast shipping on top items</div>
+                  </div>
+                  <div class="stat-card">
+                    <div class="stat-value">B2B</div>
+                    <div class="stat-label">Wholesale support</div>
+                  </div>
+                </div>
+
+                <div class="feature-pills">
+                  <span>Shop Tools</span>
+                  <span>Packaging</span>
+                  <span>Wholesale Accounts</span>
+                  <span>Fast Reordering</span>
+                </div>
+              </div>
+
+              <div class="hero-visual">
+                <div class="mock-window">
+                  <div class="mock-toolbar">
+                    <div class="mock-dots"><span></span><span></span><span></span></div>
+                    <div class="mock-chip">Inventory Preview</div>
+                  </div>
+                  <div class="mock-content">
+                    <div class="panel">
+                      <div class="panel-title">Featured Categories</div>
+                      <div class="panel-list">
+                        <div class="panel-block"></div>
+                        <div class="panel-block"></div>
+                      </div>
+                    </div>
+                    <div class="panel">
+                      <div class="panel-title">Supply Snapshot</div>
+                      <div class="panel-list">
+                        <div class="panel-line"></div>
+                        <div class="panel-line" style="width: 86%"></div>
+                        <div class="panel-block" style="height: 120px;"></div>
+                        <div class="panel-line" style="width: 60%"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      `
+    };
+
+    const demoStage = document.getElementById('demo_stage');
+    const demoButtons = document.querySelectorAll('.demo');
+
+    function renderDemo(key) {
+      demoStage.innerHTML = demoTemplates[key] || demoTemplates.craftprodepot;
+    }
+
+    demoButtons.forEach(button => {
+      button.addEventListener('click', (e) => {
+        const key = e.currentTarget.dataset.key;
+
+        demoButtons.forEach(btn => btn.classList.remove('active'));
+        e.currentTarget.classList.add('active');
+
+        renderDemo(key);
+
+        const widgetId = widgetMap[key];
+        if (widgetId) {
+          loadWidget(widgetId);
         }
+      });
+    });
 
-        const widgetMap = {
-                veloriasweets: '699615f2f303677dc8680667',
-                horizoncanopysolutions: '6996158a95fbc53f3ac06c22',
-                vinylpromachines: '6996151595fbc54a6ec04f34',
-                barbershop: '69384336e132d83cd7d7b3a8',
-                craftprodepot: '699613f395fbc57fe3c000b7',
-        };
-
-
-        const demoButtons = document.querySelectorAll('button.demo');
-        const demoImage = document.getElementById('demo_image');
-
-        demoButtons.forEach(button => {
-                button.addEventListener('click', (e) => {
-                        // UI aktiflik
-                        demoButtons.forEach(btn => {
-                                btn.classList.remove('bg-background', 'text-foreground', 'shadow-sm');
-                                btn.classList.add('text-muted-foreground');
-                        });
-
-                        e.target.classList.add('bg-background', 'text-foreground', 'shadow-sm');
-                        e.target.classList.remove('text-muted-foreground');
-
-                        // Görsel değiştir
-                        const key = e.target.textContent.toLowerCase().replace(/\s+/g, '');
-                        demoImage.src = `./showcase_files/${key}.png`;
-
-                        // Widget değiştir
-                        const widgetId = widgetMap[key];
-                        if (widgetId) {
-                                loadWidget(widgetId);
-                        }
-                });
-        });
-
-
-</script>
-
+    renderDemo('craftprodepot');
+  </script>
+</body>
 </html>

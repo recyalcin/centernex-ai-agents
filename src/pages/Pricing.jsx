@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react';
-import { Check, X, Info } from 'lucide-react';
+import { Check, ChevronDown, ChevronUp } from 'lucide-react';
 import GLOBALS, { navigate } from '../constants/general';
 import CTA from '../components/ui/CTA';
 import PageHero from '../components/ui/PageHero';
@@ -7,7 +7,7 @@ import PageHero from '../components/ui/PageHero';
 const Pricing = () => {
   const bookLink = GLOBALS.CALENDAR;
 
-  const [selectedFeature, setSelectedFeature] = useState(null);
+  const [openFeature, setOpenFeature] = useState(null);
 
   const goldFeatures = useMemo(
     () => [
@@ -86,17 +86,25 @@ const Pricing = () => {
     []
   );
 
-  const FeatureItem = ({ feature, dark = false }) => {
-    return (
+  const toggleFeature = (key) => {
+    setOpenFeature((prev) => (prev === key ? null : key));
+  };
+
+const FeatureItem = ({ feature, featureKey, dark = false }) => {
+  const isOpen = openFeature === featureKey;
+
+  return (
+    <div
+      className={`rounded-2xl border transition-all duration-200 overflow-hidden ${
+        dark
+          ? 'border-white/10 bg-white/5 hover:bg-white/10 hover:border-white/20'
+          : 'border-gray-100 bg-gray-50 hover:bg-white hover:border-gray-200'
+      }`}
+    >
       <button
         type="button"
-        onClick={() => setSelectedFeature(feature)}
-        className={`w-full text-left flex items-center justify-between gap-3 rounded-2xl px-4 py-3 border transition-all duration-200 group
-          ${
-            dark
-              ? 'border-white/10 bg-white/5 hover:bg-white/10 hover:border-white/20'
-              : 'border-gray-100 bg-gray-50 hover:bg-white hover:border-gray-200'
-          }`}
+        onClick={() => toggleFeature(featureKey)}
+        className="w-full text-left flex items-center justify-between gap-3 px-4 py-3"
       >
         <div className="flex items-center space-x-3 min-w-0">
           <Check className={`h-5 w-5 shrink-0 ${dark ? 'text-purple-400' : 'text-green-500'}`} />
@@ -107,16 +115,29 @@ const Pricing = () => {
 
         <div
           className={`shrink-0 rounded-full p-1.5 transition-colors ${
-            dark
-              ? 'bg-white/10 text-gray-300 group-hover:bg-white/15'
-              : 'bg-white text-gray-500 group-hover:bg-gray-100'
+            dark ? 'bg-white/10 text-gray-300' : 'bg-white text-gray-500'
           }`}
         >
-          <Info className="h-4 w-4" />
+          {isOpen ? <ChevronUp className="h-4 w-4" /> : <ChevronDown className="h-4 w-4" />}
         </div>
       </button>
-    );
-  };
+
+      <div
+        className={`overflow-hidden transition-all duration-300 ease-in-out ${
+          isOpen ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'
+        }`}
+      >
+        <div
+          className={`px-4 pb-4 pt-1 text-sm leading-relaxed border-t ${
+            dark ? 'border-white/10 text-gray-300' : 'border-gray-200 text-gray-600'
+          }`}
+        >
+          {feature.description}
+        </div>
+      </div>
+    </div>
+  );
+};
 
   return (
     <div className="bg-white">
@@ -158,7 +179,7 @@ const Pricing = () => {
 
               <div className="space-y-3 mb-10 flex-grow">
                 {goldFeatures.map((feature, i) => (
-                  <FeatureItem key={i} feature={feature} />
+                  <FeatureItem key={i} feature={feature} featureKey={`gold-${i}`} />
                 ))}
               </div>
 
@@ -188,7 +209,12 @@ const Pricing = () => {
 
               <div className="space-y-3 mb-10 flex-grow">
                 {platinumFeatures.map((feature, i) => (
-                  <FeatureItem key={i} feature={feature} dark />
+                  <FeatureItem
+                    key={i}
+                    feature={feature}
+                    featureKey={`platinum-${i}`}
+                    dark
+                  />
                 ))}
               </div>
 
@@ -204,54 +230,6 @@ const Pricing = () => {
       </section>
 
       <CTA />
-
-      {/* Feature Popup */}
-      {selectedFeature && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center px-4"
-          onClick={() => setSelectedFeature(null)}
-        >
-          <div className="absolute inset-0 bg-black/55 backdrop-blur-sm"></div>
-
-          <div
-            className="relative z-10 w-full max-w-lg rounded-3xl bg-white shadow-2xl border border-gray-100 p-8"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <div className="flex items-start justify-between gap-4 mb-6">
-              <div>
-                <div className="inline-flex items-center gap-2 rounded-full bg-purple-100 text-purple-700 px-3 py-1 text-xs font-bold uppercase tracking-wider mb-3">
-                  <Info className="h-3.5 w-3.5" />
-                  Feature Details
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900">{selectedFeature.title}</h3>
-              </div>
-
-              <button
-                type="button"
-                onClick={() => setSelectedFeature(null)}
-                className="rounded-full p-2 text-gray-500 hover:bg-gray-100 hover:text-gray-900 transition"
-                aria-label="Close popup"
-              >
-                <X className="h-5 w-5" />
-              </button>
-            </div>
-
-            <p className="text-gray-600 leading-relaxed text-base">
-              {selectedFeature.description}
-            </p>
-
-            <div className="mt-8 flex justify-end">
-              <button
-                type="button"
-                onClick={() => setSelectedFeature(null)}
-                className="px-5 py-3 rounded-xl bg-gray-900 text-white font-semibold hover:bg-black transition"
-              >
-                Close
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 };
