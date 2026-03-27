@@ -30,7 +30,7 @@ const Demo = () => {
             <iframe
               src="showcase.html"
               className="w-full border-none"
-              style={{ width: "100%", height: "650px" }}
+              style={{ width: "100%", height: "650px"}}
               title="Industry Landing Page Demo"
               allow="microphone;"
               loading="lazy"
