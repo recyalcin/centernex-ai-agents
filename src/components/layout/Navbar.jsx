@@ -24,7 +24,7 @@ const Navbar = ({ scrolled }) => {
           {/* Logo */}
           <button onClick={() => handleNavigate('home')} className="flex items-center focus:outline-none">
             <div className="rounded-xl overflow-hidden">
-              <img src={myIcon} style={{ height: '60px', width: '60px', objectFit: 'contain' }} alt="Logo" />
+              <img src={myIcon} style={{ height: '70px', width: '70px', objectFit: 'contain' }} alt="Logo" />
             </div>
           </button>
           
